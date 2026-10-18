@@ -1,0 +1,67 @@
+/*
+ * globals.css
+ * ─────────────────────────────────────────────────────────
+ * TODO: Thêm design tokens (màu sắc, spacing, typography)
+ *       theo brand guideline của dự án vào đây.
+ * ─────────────────────────────────────────────────────────
+ */
+
+@import "tailwindcss";
+
+/* ── CSS Custom Properties (Design Tokens) ─────────────── */
+:root {
+  /* TODO: Thay thế bằng màu sắc thực tế của dự án */
+  --color-primary: #1d4ed8;
+  --color-primary-hover: #1e40af;
+
+  --color-background: #ffffff;
+  --color-foreground: #111827;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+
+  --font-sans: var(--font-sans, system-ui, sans-serif);
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+/* ── Base Reset ────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+/* ── Accessibility ─────────────────────────────────────── */
+/* Ẩn visually nhưng vẫn accessible với screen reader */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding: 0.5rem 1rem;
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  z-index: 9999;
+}
+.skip-link:focus {
+  top: 0;
+}
