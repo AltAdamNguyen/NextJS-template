@@ -1,7 +1,5 @@
-// (public)/tra-cuu/page.tsx — Trang tra cứu tiến độ hồ sơ
-// TODO: Implement form tra cứu + bảng kết quả
-
 import type { Metadata } from 'next';
+import { TraCuuView } from '@/features/tra-cuu/views/TraCuuView';
 
 export const metadata: Metadata = {
   title: 'Tra cứu tiến độ hồ sơ',
@@ -12,12 +10,7 @@ export default function TraCuuPage() {
   return (
     <section aria-labelledby="tra-cuu-heading">
       <h1 id="tra-cuu-heading">Tra cứu tiến độ hồ sơ</h1>
-      {/*
-       * TODO: Tích hợp component form tra cứu.
-       * Gợi ý: Dùng feature module riêng tại src/features/lookup/
-       *   - LookupSearchForm (nhập mã hồ sơ / CCCD)
-       *   - LookupResultTable (hiển thị trạng thái)
-       */}
+      <TraCuuView />
     </section>
   );
 }
